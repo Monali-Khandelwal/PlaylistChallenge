@@ -14,9 +14,7 @@ public class Music {
     }
 
     public Integer selection(Integer startIndex, String selection){
-        //String[] songs= new String[playList.length];
         String startSong = playList[startIndex];
-        //boolean songSelect = true;
         Integer btnPress = 0;
         for (int i = startIndex; i < playList.length-1; i++) {
             if (playList[i] != selection) {
@@ -32,4 +30,27 @@ public class Music {
             }
         return btnPress;
     }
+
+    //   Another way of doing the selection method
+
+//    public Integer selection(Integer startIndex, String selection){
+//        int i =startIndex;
+//        int countUp=0;
+//        int countDown=0;
+//        while (playList[i]!=selection){
+//            i++;
+//            countUp++;
+//            if(i == playList.length){i=0;}
+//        }
+//        i=startIndex;
+//        while (playList[i]!=selection){
+//            i--;
+//            countDown++;
+//            if(i == -1){i=playList.length-1;}
+//        }
+//
+//        if(countDown<countUp){
+//            return countDown;
+//        } else return countUp;
+//    }
 }
